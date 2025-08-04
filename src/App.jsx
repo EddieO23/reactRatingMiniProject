@@ -1,11 +1,14 @@
 import React from 'react'
+import Rating from './components/Rating'
 
 function App() {
+
   return (
-    <div>
-      Rate your experience!
-    </div>
+    <>
+    <Rating/>
+    </>
   )
 }
 
 export default App
+ 
