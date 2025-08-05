@@ -1,14 +1,21 @@
-import React from 'react'
-import Rating from './components/Rating'
+import React from 'react';
+import Rating from './components/Rating';
 
 function App() {
-
   return (
     <>
-    <Rating/>
+      <Rating
+        heading='How do you feel about react?'
+        feedbackMessages={[
+          'Hate it',
+          'Dislike it',
+          'Meh',
+          'Like it',
+          'Love it',
+        ]}
+      />
     </>
-  )
+  );
 }
 
-export default App
- 
+export default App;
