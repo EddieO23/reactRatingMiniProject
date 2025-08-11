@@ -14,22 +14,18 @@ function Rating({
   return (
     <div className='rating-container'>
       <h2>{heading}</h2>
-      <p>{hover}</p>
       <div className='stars'>
         {stars.map((star) => (
-          <Star key={star} star={star} />
-          // <span
-          //   onClick={() => setRating(star)}
-          //   key={star}
-          //   className='star'
-          //   style={{
-          //     color: star <= (hover || rating) ? color : '#ccc',
-          //   }}
-          //   onMouseEnter={() => setHover(star)}
-          //   onMouseLeave={() => setHover(0)}
-          // >
-          //   {'\u2605'}
-          // </span>
+          <Star
+            key={star}
+            star={star}
+            rating={rating}
+            hover={hover}
+            color={color}
+            ratingClick={setRating}
+            hoverEnter={setHover}
+            hoverLeave={() => setHover(null)}
+          />
         ))}
       </div>
       {rating > 0 && <p className='feedback'>{feedbackMessages[rating - 1]}</p>}
